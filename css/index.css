@@ -6,6 +6,14 @@
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {
@@ -16,7 +24,7 @@ body {
 
 .container {
     margin: 0;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     overflow: hidden;
 }
@@ -30,6 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     grid-template-columns: repeat(2, max-content);
+    scroll-behavior: smooth;
 }
 
 .nav_logo {
@@ -47,6 +56,8 @@ body {
     transition: .4s transform;
     color: white;
     text-decoration: none;
+    font-size: 1.6rem;
+    margin-right: 30px;
 }
 
 .nav_hamburger {
@@ -74,12 +85,6 @@ body {
     grid-row: 1/2;
 }
 
-.nav_link {
-    font-size: 1.2rem;
-    letter-spacing: none;
-    text-decoration: none;
-}
-
 .nav_item {
     list-style: none;
 }
@@ -91,6 +96,10 @@ body {
     letter-spacing: 2px;
 }
 
+.nav_link:hover {
+    text-shadow: 0 0 5px #ffffff;
+}
+
 .grid-container > * {
     text-align: center;
 }
@@ -98,7 +107,9 @@ body {
 .header {
     grid-area: header;
     background-color: #0F4C75;
-    padding: 10px
+    padding: 10px;
+    position: fixed;
+    width: 100%;
 }
 
 .main {
@@ -124,7 +135,7 @@ body {
         "footer" 100px;
 }
 
-@media (max-width:768px) {
+@media (max-width:900px) {
     .nav {
         --state-hamburguer:scale(1);
         --state-close: scale(0);
@@ -144,7 +155,8 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-
+        max-width: 900px;
+        height: 700px;
         display: grid;
         grid-auto-flow: row;
         align-content: center;
