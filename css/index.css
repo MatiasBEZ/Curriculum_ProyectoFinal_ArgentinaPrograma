@@ -174,3 +174,46 @@ body {
     text-align: justify;
     text-justify: inter-word;
 }
+
+
+/* Datos personales section */
+
+#datos {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+@media(max-width:980px) {
+    #datos {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 50px;
+        justify-content: center;
+    }
+}
+
+.profile_pic {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #0F4C75;
+}
+
+.prof_title {
+    margin-bottom: 12px;
+    font-size: 2.1rem;
+    text-align: center;
+}
+
+.prof_parag {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.5rem;
+}
