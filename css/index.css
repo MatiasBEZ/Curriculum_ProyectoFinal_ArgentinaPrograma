@@ -171,8 +171,6 @@ body {
     background-color: rgb(15, 76, 117,0.1);
     margin: 10px;
     padding: 30px;
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 
@@ -212,8 +210,47 @@ body {
     text-align: center;
 }
 
+.profile_info {
+    text-align: justify;
+}
+
 .prof_parag {
     margin-top: 20px;
     text-align: justify;
     font-size: 1.5rem;
 }
+
+
+/* Formacion section */
+#formacion {
+    
+}
+
+.form_title {
+    margin: 30px;
+}
+
+.form_row {
+    display: flex;
+    background-color: rgb(15, 76, 117,0.4);
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row_d1, .row_d2 {
+    padding: 20px;
+}
+
+.row_d1 {
+    text-align: center;
+    margin: auto;
+}
+
+.row_d2 {
+    max-width: 60%;
+}
+
+.row_d2 p{
+    text-align: justify;
+}
+
