@@ -110,6 +110,7 @@ body {
     padding: 10px;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 .main {
@@ -171,6 +172,7 @@ body {
     background-color: rgb(15, 76, 117,0.1);
     margin: 10px;
     padding: 30px;
+    border-radius: 10px;
 }
 
 
@@ -206,12 +208,25 @@ body {
 
 .prof_title {
     margin-bottom: 12px;
-    font-size: 2.1rem;
+    font-size: 3.1rem;
     text-align: center;
+    color : #0F4C75;
 }
 
 .profile_info {
     text-align: justify;
+}
+
+.profile_info ul {
+    list-style: none;
+}
+
+.profile_info i {
+    color:#0F4C75;
+}
+
+.profile_info strong {
+    color:#0F4C75;
 }
 
 .prof_parag {
@@ -232,9 +247,10 @@ body {
 
 .form_row {
     display: flex;
-    background-color: rgb(15, 76, 117,0.4);
+    background-color: rgb(235, 235, 235);
     justify-content: space-between;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .row_d1, .row_d2 {
@@ -264,7 +280,7 @@ body {
 
 .prog_box {
     background-color: #ebebeb;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 25px;
 }
 
@@ -437,5 +453,10 @@ body {
     place-items: center;
     text-decoration: none;
     margin-top: 2em;
+}
+
+main h2, h3, h4{
+    color:#0F4C75;
+    text-transform: uppercase;
 }
 
