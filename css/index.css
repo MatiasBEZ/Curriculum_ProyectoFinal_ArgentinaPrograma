@@ -311,6 +311,69 @@ body {
     text-shadow: 0 0 5px #ffffff;
 }
 
+.flags {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.flag_title {
+    font-size: 1.4rem;
+    color:#0F4C75;
+    font-weight: bold;
+}
+
+.flag {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flag img {
+    width: 85px;
+    height: 53px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pbar_container {
+    height: 10px;
+    background-color:rgb(15, 76, 117,0.3);
+    position: relative;
+}
+
+.pbar_container .progress_bar {
+    position: absolute;
+    height: 100%;
+    background-color: #0F4C75;
+}
+
+.es {
+    animation: progress_animation_es 5s forwards;
+}
+
+.en {
+    animation: progress_animation_en 5s forwards;
+}
+
+.fr {
+    animation: progress_animation_fr 5s forwards;
+}
+
+@keyframes progress_animation_es {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+@keyframes progress_animation_en {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+
+@keyframes progress_animation_fr {
+    0% {width: 0%;}
+    100% {width: 50%;}
+}
 
 /* modal section*/
 
