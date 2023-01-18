@@ -11,6 +11,13 @@ const closeModalPy = document.querySelector('.modal_close.python');
 const closeModalJs = document.querySelector('.modal_close.js');
 const closeModalDb = document.querySelector('.modal_close.db');
 
+const openModalPhoto = document.querySelector('.prog_icon.photoshop');
+const openModalFigma = document.querySelector('.prog_icon.figma');
+const modalPhoto = document.querySelector('.modal.photoshop');
+const modalFigma = document.querySelector('.modal.figma');
+const closeModalPhoto = document.querySelector('.modal_close.photoshop');
+const closeModalFigma = document.querySelector('.modal_close.figma');
+
 function OpenCloseModals (openModal, modal, closeModal) {
     var openModal = openModal;
     var modal = modal
@@ -29,3 +36,6 @@ OpenCloseModals(openModalJav, modalJav, closeModalJav);
 OpenCloseModals(openModalPy, modalPy, closeModalPy);
 OpenCloseModals(openModalJs, modalJs, closeModalJs);
 OpenCloseModals(openModalDb, modalDb, closeModalDb);
+
+OpenCloseModals(openModalPhoto, modalPhoto, closeModalPhoto);
+OpenCloseModals(openModalFigma, modalFigma, closeModalFigma);

@@ -257,6 +257,11 @@ body {
 
 /* Conocimientos section */
 
+#conocimientos {
+    display: grid;
+    gap: 20px;
+}
+
 .prog_box {
     background-color: #ebebeb;
     border-radius: 50px;
@@ -287,6 +292,11 @@ body {
     color: #ffffff;
 }
 
+.prog_icons img {
+    width: 100%;
+    filter: invert(100%) sepia(24%) saturate(2%) hue-rotate(31deg) brightness(112%) contrast(100%);
+}
+
 .prog_icon {
     background-color: #0F4C75;
     border-radius: 50%;
@@ -303,7 +313,6 @@ body {
 
 
 /* modal section*/
-
 
 .modal {
     position: fixed;
