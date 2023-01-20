@@ -1,3 +1,4 @@
+// conocimientos programacion modal consts
 const openModalJav = document.querySelector('.prog_icon.java');
 const openModalPy = document.querySelector('.prog_icon.python');
 const openModalJs = document.querySelector('.prog_icon.js');
@@ -11,6 +12,7 @@ const closeModalPy = document.querySelector('.modal_close.python');
 const closeModalJs = document.querySelector('.modal_close.js');
 const closeModalDb = document.querySelector('.modal_close.db');
 
+// conocimientos disenio modal consts
 const openModalPhoto = document.querySelector('.prog_icon.photoshop');
 const openModalFigma = document.querySelector('.prog_icon.figma');
 const modalPhoto = document.querySelector('.modal.photoshop');
@@ -18,6 +20,7 @@ const modalFigma = document.querySelector('.modal.figma');
 const closeModalPhoto = document.querySelector('.modal_close.photoshop');
 const closeModalFigma = document.querySelector('.modal_close.figma');
 
+// function to open and close modals when press a button
 function OpenCloseModals (openModal, modal, closeModal) {
     var openModal = openModal;
     var modal = modal
@@ -39,3 +42,42 @@ OpenCloseModals(openModalDb, modalDb, closeModalDb);
 
 OpenCloseModals(openModalPhoto, modalPhoto, closeModalPhoto);
 OpenCloseModals(openModalFigma, modalFigma, closeModalFigma);
+
+
+//email validator
+
+function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(inputText.match(mailformat)){
+        return true;
+    } else {
+        alert("Por favor ingresa un email válido!");
+        document.form.email.focus();
+        return false;
+    }
+}
+
+
+// contact form functionality
+var form = document.querySelector("#contact_form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var nameValue = form.querySelector("#name").value;
+    var email = form.querySelector("#email").value;
+    var message = form.querySelector("#message").value;
+
+    if (ValidateEmail(email)) {
+        var formData = new FormData();
+        formData.append("name", nameValue);
+        formData.append("email", email);
+        formData.append("message", message);
+    
+        for (const value of formData.values()) {
+            console.log(value);
+        }
+    
+        form.reset();
+    }
+});
