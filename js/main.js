@@ -20,6 +20,10 @@ const modalFigma = document.querySelector('.modal.figma');
 const closeModalPhoto = document.querySelector('.modal_close.photoshop');
 const closeModalFigma = document.querySelector('.modal_close.figma');
 
+// sucess message form consts
+const modalSuccess = document.querySelector('.modal.success');
+const closeModalSuccess = document.querySelector('.modal_close.success');
+
 // function to open and close modals when press a button
 function OpenCloseModals (openModal, modal, closeModal) {
     var openModal = openModal;
@@ -69,15 +73,23 @@ form.addEventListener("submit", function(e) {
     var message = form.querySelector("#message").value;
 
     if (ValidateEmail(email)) {
-        var formData = new FormData();
-        formData.append("name", nameValue);
-        formData.append("email", email);
-        formData.append("message", message);
+        // var formData = new FormData();
+        // formData.append("name", nameValue);
+        // formData.append("email", email);
+        // formData.append("message", message);
     
-        for (const value of formData.values()) {
-            console.log(value);
-        }
-    
+        // for (const value of formData.values()) {
+        //     console.log(value);
+        // }
+        document.getElementById('name_data').innerHTML = nameValue;
+        document.getElementById('email_data').innerHTML = email;
+        document.getElementById('message_data').innerHTML = message;
+
+        modalSuccess.classList.add('modal--show');
+        closeModalSuccess.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalSuccess.classList.remove('modal--show');
+        })
         form.reset();
     }
 });

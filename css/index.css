@@ -547,6 +547,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity .6s;
+    z-index: 101;
 }
 
 .modal--show {
@@ -585,6 +586,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: baseline;
+    flex-wrap: wrap;
 }
 
 .modal_close {
@@ -596,6 +598,22 @@ body {
     place-items: center;
     text-decoration: none;
     margin-top: 2em;
+}
+
+.formdata {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(15, 76, 117,0.1);
+    border-radius: 10px;
+    text-align: justify;
+    padding: 20px;
+    overflow: auto;
+    max-height: 240px;
+}
+
+.formdata p {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 main h2, h3, h4{
